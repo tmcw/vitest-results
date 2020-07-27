@@ -10,6 +10,9 @@
     "license": "MIT",
     "main": "lib/main/index",
     "repository": "github:kayahr/jest-matchers",
+    "publishConfig": {
+        "access": "public"
+    },
     "files": [
         "src/main",
         "lib/main"
