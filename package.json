@@ -1,7 +1,7 @@
 {
     "$schema": "http://json.schemastore.org/package",
     "name": "@kayahr/jest-matchers",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Additional Jest matchers",
     "keywords": [
         "jest",
