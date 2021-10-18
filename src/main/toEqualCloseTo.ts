@@ -22,7 +22,7 @@ const failMessage = (actual: unknown, expected: unknown, numDigits: number) => (
         + `  ${printReceived(actual)}`;
 
 expect.extend({
-    toEqualCloseTo(received: unknown, expected: unknown, numDigits = 2): jest.CustomMatcherResult {
+    toEqualCloseTo(received: unknown, expected: unknown, numDigits: number = 2): jest.CustomMatcherResult {
         const pass = this.equals(received, expected, [
             (a: unknown, b: unknown) => {
                 if (typeof a === "number" && typeof b === "number") {

@@ -3,8 +3,6 @@
  * See LICENSE.md for licensing information.
  */
 
-type EquatableConstructor<A extends unknown[]> = new (...args: A) => Equatable;
-
 interface Equatable {
     equals(object: unknown): boolean;
 }

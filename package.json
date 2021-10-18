@@ -34,16 +34,14 @@
             {
                 "displayName": "node",
                 "testEnvironment": "jest-environment-node-single-context",
-                "testRunner": "jest-circus/runner",
                 "testMatch": [
                     "<rootDir>/lib/test/**/*.test.js"
                 ]
             },
             {
                 "displayName": "electron",
-                "runner": "@jest-runner/electron",
-                "testEnvironment": "@jest-runner/electron/environment",
-                "testRunner": "jest-circus/runner",
+                "runner": "@kayahr/jest-electron-runner",
+                "testEnvironment": "@kayahr/jest-electron-runner/environment",
                 "testMatch": [
                     "<rootDir>/lib/test/**/*.test.js"
                 ]
@@ -54,24 +52,23 @@
         ]
     },
     "devDependencies": {
-        "@jest-runner/electron": "3.0.0",
-        "@kayahr/eslint-config": "1.0.0",
-        "@types/jest": "26.0.7",
-        "@typescript-eslint/eslint-plugin": "3.7.1",
-        "@typescript-eslint/parser": "3.7.1",
-        "cspell": "4.0.63",
-        "electron": "9.1.1",
-        "eslint": "7.5.0",
-        "eslint-plugin-deprecation": "1.1.0",
-        "eslint-plugin-simple-import-sort": "5.0.3",
-        "jest": "26.1.0",
-        "jest-circus": "26.1.0",
-        "jest-environment-node-single-context": "26.1.0",
+        "@kayahr/eslint-config": "1.6.1",
+        "@kayahr/jest-electron-runner": "4.0.4",
+        "@types/jest": "27.0.2",
+        "@typescript-eslint/eslint-plugin": "5.0.0",
+        "@typescript-eslint/parser": "5.0.0",
+        "cspell": "5.12.3",
+        "electron": "15.2.0",
+        "eslint": "7.32.0",
+        "eslint-plugin-deprecation": "1.2.1",
+        "eslint-plugin-simple-import-sort": "7.0.0",
+        "jest": "27.3.0",
+        "jest-environment-node-single-context": "27.2.0",
         "rimraf": "3.0.2",
-        "typescript": "3.9.7"
+        "typescript": "4.4.4"
     },
     "dependencies": {
-        "jest-matcher-utils": "^26.0.0",
-        "tslib": "^2.0.0"
+        "jest-matcher-utils": "^27.3.0",
+        "tslib": "^2.3.1"
     }
 }
