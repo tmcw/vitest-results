@@ -45,7 +45,7 @@ describe("toBeEquatable", () => {
 
     it("rejects equals implementation which is not reflexive", () => {
         class Test2 extends Test {
-            public equals(other: unknown): boolean {
+            public override equals(other: unknown): boolean {
                 if (this === other) {
                     return false;
                 }
