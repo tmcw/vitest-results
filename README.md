@@ -43,6 +43,17 @@ expect(new Color(0, 0, 0)).toBeEquatable(
 );
 ```
 
+### toBeGarbageCollected(destructor, timeout)
+
+Checks if the test object (which must be passed via a `WeakRef`) is correctly garbage collected. For this you have to specify a destructor function which
+removes all references to the test object. You can also optionally specify a timeout which defaults to 5000 milliseconds. When the object was not garbage
+collected in this time then the test fails.
+
+```typescript
+let testSubject: Record<string, unknown> | undefined = { a: 34 };
+await expect(new WeakRef(testSubject)).toBeGarbageCollected(() => { testSubject = undefined; });
+```
+
 [Jest]: https://jestjs.io/
 [toBeCloseTo()]: https://jestjs.io/docs/en/expect#tobeclosetonumber-numdigits
 [object.equals()]: https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)

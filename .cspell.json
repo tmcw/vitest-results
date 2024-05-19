@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/master/cspell.schema.json",
-    "version": "0.1",
+    "version": "0.2",
     "files": [
         "**/*"
     ],
@@ -22,6 +22,7 @@
     ],
     "words": [
         "cloneable",
+        "cobertura",
         "deserializable",
         "deserializes",
         "Disableable",
@@ -30,6 +31,7 @@
         "fract",
         "kayahr",
         "kaylib",
+        "lcov",
         "Mutex",
         "Reimer",
         "serializable",
@@ -39,5 +41,8 @@
         "xyxxxxxxxxxx",
         "yxxx"
     ],
-    "language": "en"
+    "language": "en",
+    "enableFiletypes": [
+        "javascript"
+    ]
 }
