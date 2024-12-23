@@ -1,27 +1,26 @@
-jest-matchers
-=============
+# jest-matchers
 
-Some additional [Jest] matchers I usually use in my projects.
+[GitHub] | [NPM]
+
+Some additional [Vitest] matchers I usually use in my projects. Also registers the matchers from [jest-extended].
 
 
-Usage
------
+## Usage
 
 * Install dependency:
 
     ```
-    npm install --dev @kayahr/jest-matchers
+    npm install -DE @kayahr/vitest-matchers
     ```
 
-* Import it in your Jest test file:
+* Import it in your Vitest test file:
 
     ```typescript
     @import "@kayahr/jest-matchers";
     ```
 
 
-Matchers
---------
+## Matchers
 
 ### toEqualCloseTo(value, numDigits?)
 
@@ -54,6 +53,8 @@ let testSubject: Record<string, unknown> | undefined = { a: 34 };
 await expect(new WeakRef(testSubject)).toBeGarbageCollected(() => { testSubject = undefined; });
 ```
 
-[Jest]: https://jestjs.io/
-[toBeCloseTo()]: https://jestjs.io/docs/en/expect#tobeclosetonumber-numdigits
+[Vitest]: https://vitest.dev/
+[toBeCloseTo()]: https://vitest.dev/api/expect#tobecloseto
 [object.equals()]: https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)
+[GitHub]: https://github.com/kayahr/vitest-matchers
+[NPM]: https://www.npmjs.com/package/@kayahr/vitest-matchers

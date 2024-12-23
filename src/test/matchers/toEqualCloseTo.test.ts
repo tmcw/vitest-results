@@ -3,7 +3,9 @@
  * See LICENSE.md for licensing information.
  */
 
-import "../main/toEqualCloseTo";
+import "../../main/matchers/toEqualCloseTo.js";
+
+import { describe, expect, it } from "vitest";
 
 describe("toEqualCloseTo", () => {
     it("can compare numbers with specified precision", () => {

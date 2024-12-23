@@ -3,7 +3,9 @@
  * See LICENSE.md for licensing information.
  */
 
-import "../main/toBeEquatable";
+import "../../main/matchers/toBeEquatable.js";
+
+import { describe, expect, it } from "vitest";
 
 // Test class with correctly implemented equals method
 class Test {

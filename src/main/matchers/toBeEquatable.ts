@@ -3,16 +3,12 @@
  * See LICENSE.md for licensing information.
  */
 
-interface Equatable {
-    equals(object: unknown): boolean;
-}
+import { expect } from "vitest";
 
-function isEquatable(object: unknown): object is Equatable {
-    return object != null && typeof (object as Equatable).equals === "function";
-}
+import { isEquatable } from "../util/Equatable.js";
 
 expect.extend({
-    toBeEquatable(value: unknown, equalValues: unknown[], unequalValues: unknown[]): jest.CustomMatcherResult {
+    toBeEquatable(value: unknown, equalValues: unknown[], unequalValues: unknown[]) {
         const successes: string[] = [];
         const failures: string[] = [];
 

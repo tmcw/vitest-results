@@ -1,6 +1,8 @@
-import "../main/toBeGarbageCollected";
+import "../../main/matchers/toBeGarbageCollected.js";
 
-import { sleep } from "../main/util/sleep";
+import { describe, expect, it } from "vitest";
+
+import { sleep } from "../../main/util/sleep.js";
 
 describe("toBeGarbageCollected", () => {
     it("passes when object was garbage collected", async () => {
