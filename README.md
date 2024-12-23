@@ -1,4 +1,4 @@
-# jest-matchers
+# vitest-matchers
 
 [GitHub] | [NPM]
 
@@ -16,7 +16,7 @@ Some additional [Vitest] matchers I usually use in my projects. Also registers t
 * Import it in your Vitest test file:
 
     ```typescript
-    @import "@kayahr/jest-matchers";
+    @import "@kayahr/vitest-matchers";
     ```
 
 
