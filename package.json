@@ -14,7 +14,7 @@
     "repository": "github:kayahr/vitest-matchers",
     "homepage": "https://github.com/kayahr/vitest-matchers",
     "bugs": "https://github.com/kayahr/vitest-matchers/issues",
-    "funding": "https://github.com/kayahr/datastream?sponsor=1",
+    "funding": "https://github.com/kayahr/vitest-matchers?sponsor=1",
     "publishConfig": {
         "access": "public"
     },
