@@ -1,7 +1,7 @@
 {
     "$schema": "http://json.schemastore.org/package",
     "name": "@kayahr/vitest-matchers",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "type": "module",
     "description": "Additional Vitest matchers",
     "keywords": [
