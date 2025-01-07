@@ -9,6 +9,7 @@ export * from "./jest-extended.js";
 export * from "./matchers/toBeEquatable.js";
 export * from "./matchers/toBeGarbageCollected.js";
 export * from "./matchers/toEqualCloseTo.js";
+export * from "./support/environment.js";
 
 interface CustomMatchers<R = unknown> {
     toBeEquatable(equalValues: unknown[], unequalValues: unknown[]): R;
