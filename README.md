@@ -1,3 +1,6 @@
+_Work-in-progress repo, right now this is just a fork of vitest-matchers, which
+it is using for all of the good patterns that kayahr put in place_.
+
 # vitest-matchers
 
 [GitHub] | [NPM]

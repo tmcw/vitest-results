@@ -11,5 +11,5 @@
  * @return True if object is a record, false if not.
  */
 export function isRecord(object: unknown): object is Record<string, unknown> {
-    return object != null && (object as object).constructor === Object;
+	return object != null && (object as object).constructor === Object;
 }

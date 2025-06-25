@@ -12,13 +12,13 @@ export * from "./matchers/toEqualCloseTo.js";
 export * from "./support/environment.js";
 
 interface CustomMatchers<R = unknown> {
-    toBeEquatable(equalValues: unknown[], unequalValues: unknown[]): R;
-    toBeGarbageCollected(destructor: () => void, timeout?: number): Promise<R>;
-    toEqualCloseTo(value: unknown, precision?: number): R;
+	toBeEquatable(equalValues: unknown[], unequalValues: unknown[]): R;
+	toBeGarbageCollected(destructor: () => void, timeout?: number): Promise<R>;
+	toEqualCloseTo(value: unknown, precision?: number): R;
 }
 
 declare module "vitest" {
-    interface Assertion<T = any> extends CustomMatchers<T> {}
-    interface AsymmetricMatchersContaining extends CustomMatchers {}
-    interface ExpectStatic<T = any> extends CustomMatchers<T> {}
+	interface Assertion<T = any> extends CustomMatchers<T> {}
+	interface AsymmetricMatchersContaining extends CustomMatchers {}
+	interface ExpectStatic<T = any> extends CustomMatchers<T> {}
 }
