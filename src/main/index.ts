@@ -8,9 +8,6 @@ import "vitest";
 export * from "./matchers/toBeOk.js";
 
 interface CustomMatchers<R = unknown> {
-	toBeEquatable(equalValues: unknown[], unequalValues: unknown[]): R;
-	toBeGarbageCollected(destructor: () => void, timeout?: number): Promise<R>;
-	toEqualCloseTo(value: unknown, precision?: number): R;
 	// Chainable properties for Result types
 	okv: R;
 	okx: R;
