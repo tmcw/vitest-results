@@ -5,16 +5,15 @@
 
 import "vitest";
 
-export * from "./jest-extended.js";
-export * from "./matchers/toBeEquatable.js";
-export * from "./matchers/toBeGarbageCollected.js";
-export * from "./matchers/toEqualCloseTo.js";
-export * from "./support/environment.js";
+export * from "./matchers/toBeOk.js";
 
 interface CustomMatchers<R = unknown> {
 	toBeEquatable(equalValues: unknown[], unequalValues: unknown[]): R;
 	toBeGarbageCollected(destructor: () => void, timeout?: number): Promise<R>;
 	toEqualCloseTo(value: unknown, precision?: number): R;
+	// Chainable properties for Result types
+	okv: R;
+	okx: R;
 }
 
 declare module "vitest" {
