@@ -1,10 +1,12 @@
-/*
- * Copyright (C) 2020 Klaus Reimer <k@ailis.de>
- * See LICENSE.md for licensing information.
- */
-
 import * as chai from "chai";
 import { Ok } from "neverthrow";
+import "vitest";
+
+declare module "vitest" {
+	interface Assertion {
+		okv: Assertion;
+	}
+}
 
 chai.use((chai, utils) => {
 	utils.addChainableMethod(

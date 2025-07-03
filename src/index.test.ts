@@ -3,7 +3,7 @@
  * See LICENSE.md for licensing information.
  */
 
-import "../../main/matchers/toBeOk.js";
+import "./index.js";
 import { ok } from "neverthrow";
 import { describe, expect, it } from "vitest";
 
