@@ -1,11 +1,13 @@
 _Work-in-progress repo, right now this is just a fork of vitest-matchers, which
 it is using for all of the good patterns that kayahr put in place_.
 
-# vitest-matchers
+# vitest-results
 
 [GitHub] | [NPM]
 
-Some additional [Vitest] matchers I usually use in my projects. Also registers the matchers from [jest-extended].
+
+Vitest extension to make it easier to test [neverthrow](https://github.com/supermacro/neverthrow)
+Result and ResultAsync types. Other Result types soon, possibly.
 
 
 ## Usage
