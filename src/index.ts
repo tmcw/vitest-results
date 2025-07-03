@@ -1,5 +1,5 @@
 import * as chai from "chai";
-import { Err, Ok } from "neverthrow";
+import { Err, Ok, ResultAsync } from "neverthrow";
 import "vitest";
 
 declare module "vitest" {
@@ -18,6 +18,22 @@ chai.use((chai, utils) => {
 			const obj = utils.flag(this, "object");
 			if (obj && obj instanceof Ok && obj.isOk()) {
 				utils.flag(this, "object", obj.value);
+				return this;
+			} else if (obj && obj instanceof ResultAsync) {
+				const mapped = obj.match(
+					(v) => v,
+					(err: any) => {
+						this.assert(
+							false,
+							`expected #{this} to be Ok with value`,
+							`expected #{this} not to be Ok with value`,
+							true,
+							false,
+						);
+					},
+				);
+				console.log("re-mapped");
+				utils.flag(this, "object", mapped);
 				return this;
 			} else {
 				this.assert(
