@@ -1,7 +1,7 @@
 {
 	"$schema": "https://typedoc.org/schema.json",
-	"entryPoints": ["src/main/index.ts"],
-	"basePath": "src/main",
+	"entryPoints": ["src/index.ts"],
+	"basePath": "src/",
 	"entryPointStrategy": "resolve",
 	"out": "lib/apidoc",
 	"excludePrivate": true,
