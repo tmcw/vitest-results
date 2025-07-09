@@ -1,9 +1,4 @@
-/*
- * Copyright (C) 2020 Klaus Reimer <k@ailis.de>
- * See LICENSE.md for licensing information.
- */
-
-import "./index.js";
+import "./index";
 import { ResultAsync, ok, err } from "neverthrow";
 import { describe, expect, it } from "vitest";
 
@@ -14,10 +9,18 @@ describe("ok", () => {
 	});
 });
 
-describe.todo("async", () => {
+describe("async", () => {
 	it("correctly identifies valid equals implementation", async () => {
+		await expect(ResultAsync.fromSafePromise(Promise.resolve(1))).aokv.toEqual(
+			1,
+		);
 		await expect(
-			ResultAsync.fromSafePromise(Promise.resolve(1)),
-		).resolves.okv.toEqual(1);
+			ResultAsync.fromSafePromise(Promise.resolve({ x: 10 })),
+		).aokv.toMatchObject({
+			x: expect.any(Number),
+		});
+		// await expect(Promise.resolve(true)).aokv.toMatchObject({
+		// 	x: expect.any(Number),
+		// });
 	});
 });
