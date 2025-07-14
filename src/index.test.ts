@@ -2,25 +2,39 @@ import "./index";
 import { ResultAsync, ok, err } from "neverthrow";
 import { describe, expect, it } from "vitest";
 
-describe("ok", () => {
-	it("correctly identifies valid equals implementation", () => {
-		expect(ok(1)).okv.toEqual(1);
-		expect(err(1)).errv.toEqual(1);
+describe("sync", () => {
+	it("$ok", () => {
+		expect(ok(1)).$ok.toEqual(1);
+	});
+	it("$ok()", () => {
+		expect(ok(1)).$ok;
+		expect(ok(1)).not.$err;
+	});
+	it("not.$err", () => {
+		// expect(err(1)).$err;
+		expect(ok(1)).not.$err;
+	});
+	it("$err", () => {
+		expect(err(1)).$err.toEqual(1);
 	});
 });
 
 describe("async", () => {
-	it("correctly identifies valid equals implementation", async () => {
-		await expect(ResultAsync.fromSafePromise(Promise.resolve(1))).aokv.toEqual(
-			1,
-		);
+	it("$asyncOk", async () => {
+		await expect(
+			ResultAsync.fromSafePromise(Promise.resolve(1)),
+		).$asyncOk.toEqual(1);
+
 		await expect(
 			ResultAsync.fromSafePromise(Promise.resolve({ x: 10 })),
-		).aokv.toMatchObject({
+		).$asyncOk.toMatchObject({
 			x: expect.any(Number),
 		});
-		// await expect(Promise.resolve(true)).aokv.toMatchObject({
-		// 	x: expect.any(Number),
-		// });
+	});
+
+	it("$asyncErr", async () => {
+		const parse = ResultAsync.fromThrowable((str) => JSON.parse(str));
+		await expect(parse("x")).$asyncErr.toBeInstanceOf(SyntaxError);
+		await expect(parse("x")).not.$asyncOk.toBeTruthy();
 	});
 });
