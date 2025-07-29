@@ -3,7 +3,7 @@
   "name": "@tmcw/vitest-results-neverthrow",
   "version": "0.0.1",
   "type": "module",
-  "description": "Vitest matchers for Result types",
+  "description": "Vitest matchers for neverthrow Result types",
   "keywords": [
     "vitest",
     "matchers",
