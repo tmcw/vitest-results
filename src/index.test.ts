@@ -2,21 +2,13 @@ import "./index";
 import { ResultAsync, ok, err } from "neverthrow";
 import { describe, expect, it } from "vitest";
 
-it("example", () => {
-	expect(err(1)).$ok.toEqual(1);
-	// expect(err(1)._unsafeUnwrap()).toEqual(1);
-	expect(ok(1)).not.$err;
-});
-
-/*
 describe("sync", () => {
 	it("$ok", () => {
 		expect(ok(1)).$ok.toEqual(1);
 	});
 	describe("$ok", () => {
 		it("$ok()", () => {
-			// expect(err(1)).$ok.toEqual(1);
-			expect(err(1)._unsafeUnwrap()).toEqual(1);
+			expect(ok(1)).$ok;
 			expect(ok(1)).not.$err;
 		});
 		it("not.$err", () => {
@@ -68,4 +60,3 @@ describe("async", () => {
 		});
 	});
 });
-*/

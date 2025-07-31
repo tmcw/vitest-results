@@ -73,6 +73,11 @@ await expect(myResultAsync).$asyncOk.toBe(someExpectation)
     @import "@tmcw/vitest-results-neverthrow";
     ```
 
+## Credits
+
+This package started as a fork of [vitest-matchers](https://github.com/kayahr/vitest-matchers)
+and owes a lot of its structure to that project. Thanks!
+
 [Vitest]: https://vitest.dev/
 [GitHub]: https://github.com/tmcw/vitest-results
 [NPM]: https://www.npmjs.com/package/@tmcw/vitest-results
