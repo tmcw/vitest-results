@@ -31,9 +31,7 @@
   },
   "scripts": {
     "build": "zshy",
-    "test": "run-s test:*",
-    "test:unit": "vitest run",
-    "test:lint": "biome check",
+    "test": "vitest run && biome check",
     "prepare": "zshy"
   },
   "zshy": "./src/index.ts",
