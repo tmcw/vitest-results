@@ -19,8 +19,6 @@ expect(myResult._unsafeUnwrap({withStackTrace:true})).toBe(someExpectation)
 
 But this kind of sucks: it's verbose and if `myResult` is an Err, then `._unsafeUnwrap()`
 will throw an error, which prevents vitest from giving you a nice assertion error.
-Plus, there's no ergonomic way to assert what the error value should be, if you
-have a Result that should be an error.
 
 This module aims to improve that interface by adding new chainable
 methods on `expect`: `$ok`, `$err`, `$asyncOk` and `$asyncErr`.
