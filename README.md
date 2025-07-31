@@ -6,6 +6,19 @@ A [Vitest](https://vitest.dev/) extension to make it easier to
 test [neverthrow](https://github.com/supermacro/neverthrow)
 Result and ResultAsync types. Other Result types soon, possibly.
 
+<table>
+    <tr>
+        <td>
+            <strong>Before vitest-results 👿</strong>
+            <img src='./.github/before.png' alt='Before' />
+        </td>
+        <td>
+            <strong>After vitest-results 💃</strong>
+            <img src='./.github/after.png' alt='After' />
+        </td>
+    </tr>
+</table>
+
 Here's why it's useful (if you're already using vitest and neverthrow)
 
 The default recommended way to test a function that returns a Result type
