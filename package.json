@@ -30,13 +30,11 @@
     }
   },
   "scripts": {
-    "clean": "rimraf lib",
     "build": "zshy",
     "test": "run-s test:*",
     "test:unit": "vitest run",
     "test:lint": "biome check",
-    "test:apidoc": "typedoc --emit none",
-    "prepare": "run-s clean build"
+    "prepare": "zshy"
   },
   "zshy": "./src/index.ts",
   "devDependencies": {
@@ -48,9 +46,7 @@
     "@vitest/expect": "^3.2.4",
     "chai": "^5.2.1",
     "neverthrow": "^8.2.0",
-    "npm-run-all": "4.1.5",
     "rimraf": "6.0.1",
-    "typedoc": "0.28.5",
     "typescript": "5.8.3",
     "vitest": "3.2.4",
     "zshy": "^0.2.3"
