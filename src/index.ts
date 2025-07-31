@@ -291,7 +291,11 @@ chai.use((chai, utils) => {
 						return recordAsyncExpect(
 							test,
 							promise as Promise<any>,
-							createAssertionMessage(utils, this, !!args.length),
+							createAssertionMessage(
+								utils,
+								this as unknown as Assertion<any>,
+								!!args.length,
+							),
 							error,
 						);
 					};
