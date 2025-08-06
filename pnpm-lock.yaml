@@ -6,7 +6,9 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  packages/vitest-results-neverthrow:
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.1.1
