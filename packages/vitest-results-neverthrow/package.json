@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json.schemastore.org/package",
+  "name": "@tmcw/vitest-results-neverthrow",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vitest matchers for neverthrow Result types",
+  "keywords": [
+    "vitest",
+    "matchers",
+    "neverthrow"
+  ],
+  "license": "MIT",
+  "author": "Tom MacWright <tom@macwright.com>",
+  "repository": "github:tmcw/vitest-results",
+  "homepage": "https://github.com/tmcw/vitest-results",
+  "bugs": "https://github.com/tmcw/vitest-results/issues",
+  "funding": "https://github.com/tmcw/vitest-results?sponsor=1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.cts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "zshy",
+    "test": "vitest run && biome check",
+    "prepare": "zshy"
+  },
+  "zshy": "./src/index.ts",
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.1",
+    "@types/chai": "^5.2.2",
+    "@types/node": "24.0.3",
+    "@vitest/browser": "3.2.4",
+    "@vitest/coverage-v8": "3.2.4",
+    "@vitest/expect": "^3.2.4",
+    "chai": "^5.2.1",
+    "neverthrow": "^8.2.0",
+    "rimraf": "6.0.1",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4",
+    "zshy": "^0.2.3"
+  },
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.cts"
+}

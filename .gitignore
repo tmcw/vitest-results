@@ -2,3 +2,5 @@
 /node_modules
 /*.tgz
 sandbox
+.DS_Store
+node_modules
