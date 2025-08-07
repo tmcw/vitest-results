@@ -63,17 +63,17 @@ await expect(myResultAsync).$asyncOk.toBe(someExpectation)
 
 * Install it (or however you do this with pnpm, yarn, etc):
 
-    ```
-    npm install -DE @tmcw/vitest-results-neverthrow
-    ```
+```
+npm install -DE @tmcw/vitest-results-neverthrow
+```
 
 * Import it in your Vitest test file:
 
-    ```typescript
-    @import "@tmcw/vitest-results-neverthrow";
-    ```
+```typescript
+import "@tmcw/vitest-results-neverthrow";
+```
 
-## Credits
+## Thanks
 
 This package started as a fork of [vitest-matchers](https://github.com/kayahr/vitest-matchers)
 and owes a lot of its structure to that project. Thanks!
