@@ -47,6 +47,45 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3(typescript@5.8.3)
 
+  packages/vitest-results-true-myth:
+    devDependencies:
+      '@biomejs/biome':
+        specifier: ^2.1.1
+        version: 2.1.1
+      '@types/chai':
+        specifier: ^5.2.2
+        version: 5.2.2
+      '@types/node':
+        specifier: 24.0.3
+        version: 24.0.3
+      '@vitest/browser':
+        specifier: 3.2.4
+        version: 3.2.4(playwright@1.53.1)(vite@7.0.4(@types/node@24.0.3)(yaml@2.8.0))(vitest@3.2.4)
+      '@vitest/coverage-v8':
+        specifier: 3.2.4
+        version: 3.2.4(@vitest/browser@3.2.4)(vitest@3.2.4)
+      '@vitest/expect':
+        specifier: ^3.2.4
+        version: 3.2.4
+      chai:
+        specifier: ^5.2.1
+        version: 5.2.1
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      true-myth:
+        specifier: ^9.0.1
+        version: 9.0.1
+      typescript:
+        specifier: 5.8.3
+        version: 5.8.3
+      vitest:
+        specifier: 3.2.4
+        version: 3.2.4(@types/node@24.0.3)(@vitest/browser@3.2.4)(yaml@2.8.0)
+      zshy:
+        specifier: ^0.2.3
+        version: 0.2.3(typescript@5.8.3)
+
 packages:
 
   '@ampproject/remapping@2.3.0':
@@ -1007,6 +1046,10 @@ packages:
   totalist@3.0.1:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
+
+  true-myth@9.0.1:
+    resolution: {integrity: sha512-8ePgamjgV3CKDI43o6eUtid+9iadfEKUiu2WTucbeCnPTyDOQpZ4svCuozLwm9S4hzUolOclsUCJf3yjQg3g/Q==}
+    engines: {node: 18.* || >= 20.*}
 
   typescript@5.8.3:
     resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
@@ -1982,6 +2025,8 @@ snapshots:
       is-number: 7.0.0
 
   totalist@3.0.1: {}
+
+  true-myth@9.0.1: {}
 
   typescript@5.8.3: {}
 

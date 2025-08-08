@@ -122,6 +122,7 @@ chai.use((chai, utils) => {
 		function (this: typeof chai.Assertion.prototype) {
 			// Get the value inside the expect chain
 			const obj = utils.flag(this, "object");
+			const negate = utils.flag(this, "negate");
 
 			// Check that it is an Ok type.
 			const isOk = safeIsOk(obj);
@@ -136,7 +137,7 @@ chai.use((chai, utils) => {
 
 			// Replace the value inside the expect chain
 			// with the value inside of the Ok
-			utils.flag(this, "object", obj.value);
+			utils.flag(this, "object", negate ? obj.error : obj.value);
 			return this;
 		},
 	);
@@ -147,6 +148,7 @@ chai.use((chai, utils) => {
 		function (this: any) {},
 		function (this: typeof chai.Assertion.prototype) {
 			const obj = utils.flag(this, "object");
+			const negate = utils.flag(this, "negate");
 			const isErr = safeIsErr(obj);
 			this.assert(
 				// expression to be tested
@@ -156,7 +158,7 @@ chai.use((chai, utils) => {
 				// if this has been negated and fails
 				`expected #{this} not to be Err`,
 			);
-			utils.flag(this, "object", obj.error);
+			utils.flag(this, "object", negate ? obj.value : obj.error);
 			return this;
 		},
 	);

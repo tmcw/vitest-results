@@ -1,13 +1,13 @@
 {
   "$schema": "http://json.schemastore.org/package",
-  "name": "@tmcw/vitest-results-neverthrow",
+  "name": "@tmcw/vitest-results-true-myth",
   "version": "1.0.1",
   "type": "module",
-  "description": "Vitest matchers for neverthrow Result types",
+  "description": "Vitest matchers for true-myth Result types",
   "keywords": [
     "vitest",
     "matchers",
-    "neverthrow"
+    "true-myth"
   ],
   "license": "MIT",
   "author": "Tom MacWright <tom@macwright.com>",
@@ -43,8 +43,8 @@
     "@vitest/coverage-v8": "3.2.4",
     "@vitest/expect": "^3.2.4",
     "chai": "^5.2.1",
-    "neverthrow": "^8.2.0",
     "rimraf": "6.0.1",
+    "true-myth": "^9.0.1",
     "typescript": "5.8.3",
     "vitest": "3.2.4",
     "zshy": "^0.2.3"

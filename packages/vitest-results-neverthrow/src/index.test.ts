@@ -12,8 +12,7 @@ describe("sync", () => {
 			expect(ok(1)).not.$err;
 		});
 		it("not.$err", () => {
-			// expect(err(1)).$err;
-			expect(ok(1)).not.$err;
+			expect(ok(1)).not.$err.toEqual(2);
 		});
 		it.fails("$ok() (is an err)", () => {
 			expect(ok(1)).$err;
@@ -28,6 +27,9 @@ describe("sync", () => {
 		});
 		it.fails("ok", () => {
 			expect(err(1)).$ok.toEqual(1);
+		});
+		it.fails("not.$err", () => {
+			expect(ok(1)).not.$err.toEqual(1);
 		});
 	});
 });
