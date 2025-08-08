@@ -78,6 +78,11 @@ import "@tmcw/vitest-results-neverthrow";
 This package started as a fork of [vitest-matchers](https://github.com/kayahr/vitest-matchers)
 and owes a lot of its structure to that project. Thanks!
 
+## Contributing
+
+This repo uses pnpm and [changesets](https://github.com/changesets/changesets)
+to manage the dev & release lifecycle.
+
 [Vitest]: https://vitest.dev/
 [GitHub]: https://github.com/tmcw/vitest-results
 [NPM]: https://www.npmjs.com/package/@tmcw/vitest-results
