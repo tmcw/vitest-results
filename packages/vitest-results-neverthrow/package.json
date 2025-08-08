@@ -24,9 +24,8 @@
   ],
   "exports": {
     ".": {
-      "types": "./lib/index.d.cts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
     }
   },
   "scripts": {
@@ -34,22 +33,28 @@
     "test": "biome check && vitest run",
     "prepare": "zshy"
   },
-  "zshy": "./src/index.ts",
+  "zshy": {
+    "exports": {
+      ".": "./src/index.ts"
+    },
+    "cjs": false,
+    "types": "./src/index.d.ts"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^2.1.1",
+    "@biomejs/biome": "^2.1.4",
     "@types/chai": "^5.2.2",
-    "@types/node": "24.0.3",
+    "@types/node": "24.2.0",
     "@vitest/browser": "3.2.4",
     "@vitest/coverage-v8": "3.2.4",
     "@vitest/expect": "^3.2.4",
     "chai": "^5.2.1",
     "neverthrow": "^8.2.0",
     "rimraf": "6.0.1",
-    "typescript": "5.8.3",
+    "typescript": "5.9.2",
     "vitest": "3.2.4",
-    "zshy": "^0.2.3"
+    "zshy": "^0.3.5"
   },
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
-  "types": "./lib/index.d.cts"
+  "types": "./lib/index.d.ts"
 }

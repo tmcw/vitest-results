@@ -24,9 +24,8 @@
   ],
   "exports": {
     ".": {
-      "types": "./lib/index.d.cts",
-      "import": "./lib/index.js",
-      "require": "./lib/index.cjs"
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
     }
   },
   "scripts": {
@@ -34,7 +33,13 @@
     "test": "biome check && vitest run",
     "prepare": "zshy"
   },
-  "zshy": "./src/index.ts",
+  "zshy": {
+    "exports": {
+      ".": "./src/index.ts"
+    },
+    "cjs": false,
+    "types": "./src/index.d.ts"
+  },
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",
     "@types/chai": "^5.2.2",
@@ -47,9 +52,9 @@
     "true-myth": "^9.0.1",
     "typescript": "5.8.3",
     "vitest": "3.2.4",
-    "zshy": "^0.2.3"
+    "zshy": "^0.3.5"
   },
   "main": "./lib/index.cjs",
   "module": "./lib/index.js",
-  "types": "./lib/index.d.cts"
+  "types": "./lib/index.d.ts"
 }

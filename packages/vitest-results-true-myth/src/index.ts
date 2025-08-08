@@ -1,4 +1,3 @@
-import type { Assertion } from "@vitest/expect";
 import * as chai from "chai";
 import { isOk, isErr } from "true-myth/result";
 import "@vitest/runner/types";
@@ -20,19 +19,6 @@ declare module "vitest" {
 		// $asyncOk: PromisifyAssertion<T>;
 		// $asyncErr: PromisifyAssertion<T>;
 	}
-}
-
-// vendored from https://github.com/vitest-dev/vitest/blob/c1f78d2adc78ef08ef8b61b0dd6a925fb08f20b6/packages/expect/src/utils.ts
-export function createAssertionMessage(
-	util: Chai.ChaiUtils,
-	assertion: Assertion,
-	hasArgs: boolean,
-) {
-	const not = util.flag(assertion, "negate") ? "not." : "";
-	const name = `${util.flag(assertion, "_name")}(${hasArgs ? "expected" : ""})`;
-	const promiseName = util.flag(assertion, "promise");
-	const promise = promiseName ? `.${promiseName}` : "";
-	return `expect(actual)${promise}.${not}${name}`;
 }
 
 /**
